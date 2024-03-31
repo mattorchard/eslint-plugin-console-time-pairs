@@ -94,7 +94,6 @@ const rules = {
       const objectNamesToCheck = new Set(options.objectNames);
       const findScope = ScopeFinders[options.scope];
 
-      // Todo: Swap this for a map to avoid n^2 loop during wrap up
       /** @type {Timer[]} */
       const timers = [];
 
