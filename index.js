@@ -108,7 +108,7 @@ const rules = {
           const labelSourceCode = context.sourceCode.getText(firstArgument);
           const literalValue = getStringLiteralValue(firstArgument);
           const isStaticString = literalValue !== null;
-          const label = isStaticString ? literalValue : labelSourceCode;
+          const label = isStaticString ? literalValue : labelSourceCode.trim();
           timers.push({
             label,
             labelSourceCode,
