@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-console-time-pairs",
-  "description": "Ensure console.timeEnd called for each console.time",
+  "description": "Ensure console.timeEnd is called for each console.time",
   "version": "0.0.1",
   "main": "index.js",
   "homepage": "https://github.com/mattorchard/eslint-plugin-console-time-pairs",
