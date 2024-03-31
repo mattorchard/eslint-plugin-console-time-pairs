@@ -1,0 +1,12 @@
+{
+  "name": "eslint-plugin-console-time-pairs",
+  "description": "Ensure console.timeEnd called for each console.time",
+  "version": "0.0.1",
+  "main": "index.js",
+  "homepage": "https://github.com/mattorchard/eslint-plugin-console-time-pairs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattorchard/eslint-plugin-console-time-pairs.git"
+  },
+  "license": "MIT"
+}
