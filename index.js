@@ -32,6 +32,20 @@ function getStringLiteralValue(node) {
 }
 
 /**
+ * @param {EsLintNode} node
+ * @returns {string}
+ */
+function getNameForObject(node) {
+  if (node.name) {
+    return node.name;
+  }
+  if (node.type === "MemberExpression") {
+    return node.property.name;
+  }
+  return "";
+}
+
+/**
  * @param {Object} startingNode
  * @param {boolean} stopAtFirst
  * @returns {EsLintNode | null}
@@ -101,7 +115,7 @@ const rules = {
         (/** @type {'start' | 'end'} */ edge) =>
         (/** @type {EsLintNode} */ node) => {
           if (node.arguments.length === 0) return;
-          const objectName = node.callee.object.name;
+          const objectName = getNameForObject(node.callee.object);
           if (!objectNamesToCheck.has(objectName)) return;
 
           const firstArgument = node.arguments[0];
